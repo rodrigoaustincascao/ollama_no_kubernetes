@@ -1,0 +1,22 @@
+ollama:
+  gpu:
+    # -- Enable GPU integration
+    enabled: true
+
+    # -- GPU type: 'nvidia' or 'amd'
+    type: 'nvidia'
+
+    # -- Specify the number of GPU to 2
+    number: 1
+
+  # -- List of models to pull at container startup
+  models:
+    - codellama
+
+ingress:
+  enabled: true
+  hosts:
+    - host: ollama.cascao.io
+      paths:
+        - path: /
+          pathType: Prefix
